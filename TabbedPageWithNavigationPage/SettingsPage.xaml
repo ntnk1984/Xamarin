@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                          xmlns:local="clr-namespace:TabbedPageWithNavigationPage"
+   x:Class="TabbedPageWithNavigationPage.SettingsPage" IconImageSource="settings.png" Title="Settings">
+	<ContentPage.Content>
+        <StackLayout VerticalOptions="StartAndExpand">
+            <Label Text="Username" />
+            <Entry x:Name="usernameEntry" Placeholder="username" IsEnabled="False" />
+            <Label Text="Password" />
+            <Entry x:Name="passwordEntry" IsPassword="true" Placeholder="password" IsEnabled="False"/>
+            
+            <Label Text="Email" />
+            <Entry x:Name="emailEntry" Placeholder="email" />
+            <Label Text="Email Password" />
+            <StackLayout VerticalOptions="Center"
+                 >
+                <Grid>
+                    <Entry x:Name="emailPasswordEntry" Placeholder="Password"
+                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}"/>
+
+                    <ImageButton VerticalOptions="Center"
+                      Margin="0,0,10,0"
+                     HeightRequest="20"
+                     HorizontalOptions="End"
+                     Source="ic_eye_hide">
+                        <ImageButton.Triggers>
+                            <EventTrigger Event="Clicked">
+                                <local:ShowPasswordTriggerAction ShowIcon="ic_eye"
+                                                                    HideIcon="ic_eye_hide"
+                                                                    x:Name="ShowPasswordActualTrigger"/>
+                            </EventTrigger>
+                        </ImageButton.Triggers>
+                    </ImageButton>
+                </Grid>
+            </StackLayout>
+            
+
+            <Grid   x:Name="myGridVersion"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label   Text="Version"
+                                Grid.Row="0"
+                                Grid.Column="0" FontSize="Subtitle"  />
+                <Entry x:Name="versionEntry" Text="1.0" IsEnabled="False" Grid.Row="0"
+                                Grid.Column="1" FontAttributes="Bold"/>
+
+            </Grid>
+
+            <Grid   x:Name="myGrid"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label      x:Name="fpLabel"
+                                Text="Use Fingerprint"
+                                HorizontalOptions="Start"
+                                HorizontalTextAlignment="Start"
+                                Grid.Row="0"
+                                Grid.Column="0" />
+                <Switch     x:Name="fpSwitch"
+                                IsToggled="false"
+                                Toggled="OnToggled"
+                                HorizontalOptions="End"
+                                Grid.Row="0"
+                                Grid.Column="1" />
+            </Grid>
+
+
+            <Button Text="SAVE" Clicked="OnSaveButtonClicked" />
+
+            <Button Text="Check For Update" Clicked="OnCheckUpdateButtonClicked" />
+            
+            <Button Text="LogOut" Clicked="OnLogOutButtonClicked" />
+            
+            <Label x:Name="messageLabel" />
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+

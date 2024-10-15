@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="TabbedPageWithNavigationPage.LeavePage"
+			 IconImageSource="feedback.png"
+             
+			 Title="Leave">
+	<ContentPage.Content>
+		<StackLayout>
+            <WebView x:Name="webView" HeightRequest="1000" WidthRequest="1000" Source="http://csf-beta-test.northstar.edu.vn/LeavePage.html"  />
+        </StackLayout>
+	</ContentPage.Content>
+</ContentPage>

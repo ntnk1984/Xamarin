@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.2" package="com.blueridge.csf" android:installLocation="preferExternal">
+  <uses-sdk android:minSdkVersion="21" android:targetSdkVersion="28" />
+  <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+  <uses-permission android:name="android.permission.CALL_PHONE"></uses-permission>
+  <uses-permission android:name="android.permission.CALL_PRIVILEGED" />
+  <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+  <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+  <uses-permission android:name="com.android.launcher.permission.INSTALL_SHORTCUT" />
+  <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+  <uses-permission android:name="android.permission.INSTANT_APP_FOREGROUND_SERVICE" />
+  <uses-permission android:name="android.permission.SET_PROCESS_LIMIT" />
+  <uses-permission android:name="android.permission.INTERNET" />
+  <application android:label="CSF" android:usesCleartextTraffic="true" android:allowBackup="false" android:icon="@drawable/icon" android:name="android.app.Application" android:extractNativeLibs="true">
+    <provider android:name="android.support.v4.content.FileProvider" android:authorities="com.blueridge.csf.fileProvider" android:exported="false" android:grantUriPermissions="true">
+      <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/file_paths" />
+    </provider>
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
+    <receiver android:enabled="true" android:exported="false" android:name="crc643f46942d9dd1fff9.PowerSaveModeBroadcastReceiver" />
+    <activity android:configChanges="orientation|screenSize" android:icon="@drawable/icon" android:label="CSF" android:theme="@style/Theme.Splash" android:name="crc64f30460dc351fc337.MainActivity">
+      <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+      </intent-filter>
+    </activity>
+    <activity android:label="OpenAppAndroid" android:name="crc64f30460dc351fc337.OpenAppAndroid" />
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="1999999999" android:authorities="com.blueridge.csf.mono.MonoRuntimeProvider.__mono_init__" />
+  </application>
+</manifest>

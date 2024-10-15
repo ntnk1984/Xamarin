@@ -1,0 +1,38 @@
+{
+  "version": 2,
+  "dgSpecHash": "DP93udDkasYc2rT5np/UG3Y0vMd594bo2nW/CmmivW7ZXo/bJKfoYdiXyy3b9aVxFMbNkPVOShwiNDw7SQdl/A==",
+  "success": true,
+  "projectFilePath": "D:\\pkn\\temp\\Xam\\Xamarin\\TabbedPageWithNavigationPage\\TabbedPageWithNavigationPage.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Khang\\.nuget\\packages\\microsoft.appcenter\\4.0.0\\microsoft.appcenter.4.0.0.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\microsoft.appcenter.analytics\\4.0.0\\microsoft.appcenter.analytics.4.0.0.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\microsoft.appcenter.crashes\\4.0.0\\microsoft.appcenter.crashes.4.0.0.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\plugin.fingerprint\\2.1.2\\plugin.fingerprint.2.1.2.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3\\2.0.3\\sqlitepclraw.lib.e_sqlite3.2.0.3.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Khang\\.nuget\\packages\\xamarin.forms\\4.8.0.1687\\xamarin.forms.4.8.0.1687.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1903",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Newtonsoft.Json' 12.0.3 has a known high severity vulnerability, https://github.com/advisories/GHSA-5crp-9r3c-p9vr",
+      "libraryId": "Newtonsoft.Json",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

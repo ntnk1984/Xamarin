@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:local="clr-namespace:TabbedPageWithNavigationPage"
+
+             x:Class="TabbedPageWithNavigationPage.LoginPage"
+
+             >
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem Text="Sign Up" Clicked="OnSignUpButtonClicked" />
+    </ContentPage.ToolbarItems>-->
+
+    
+    <ContentPage.Content>
+        
+        <StackLayout VerticalOptions="StartAndExpand">
+            <ActivityIndicator x:Name="LoadingBusy"
+                           Color="Blue"
+                           VerticalOptions="CenterAndExpand"
+                           HorizontalOptions="Fill" />
+            <Image Source="logo.png"></Image>
+            <Entry x:Name="usernameEntry" Placeholder="username" />
+            <StackLayout VerticalOptions="Center"
+                 >
+                <Grid>
+                    <Entry x:Name="passwordEntry" Placeholder="Password"
+                IsPassword="{Binding Source={x:Reference ShowPasswordActualTrigger}, Path=HidePassword}"/>
+
+                    <ImageButton VerticalOptions="Center"
+                      Margin="0,0,10,0"
+                     HeightRequest="20"
+                     HorizontalOptions="End"
+                     Source="ic_eye_hide">
+                        <ImageButton.Triggers>
+                            <EventTrigger Event="Clicked">
+                                <local:ShowPasswordTriggerAction ShowIcon="ic_eye"
+                                                                    HideIcon="ic_eye_hide"
+                                                                    x:Name="ShowPasswordActualTrigger"/>
+                            </EventTrigger>
+                        </ImageButton.Triggers>
+                    </ImageButton>
+                </Grid>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="rememberEntry" VerticalOptions="Start" IsChecked="{Binding IsChecked,Mode=TwoWay}">
+                    <CheckBox.Margin>
+                        <OnPlatform x:TypeArguments="Thickness">
+                            <On Platform="iOS" Value="0,-10,0,0" />
+                            <On Platform="Android, WinPhone, Windows" Value="0,-5,0,0" />
+                        </OnPlatform>
+                    </CheckBox.Margin>
+                </CheckBox>
+                <Label VerticalTextAlignment="Center" VerticalOptions="Start" Text="Remember?">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer>
+
+                        </TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+
+            <Button x:Name="loginButton" Text="Login" Clicked="OnLoginButtonClicked" />
+            <!--<Button x:Name="loginFPButton" Text="Login with Fingerprint" Clicked="OnLoginFPButtonClicked" />-->
+
+
+
+            <Label x:Name="messageLabel" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
